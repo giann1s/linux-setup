@@ -18,6 +18,6 @@ To delete the backup pass the `delete` argument to backup.sh.
 
     bash ./backup.sh delete
 
-If the `restore_backup` option in /config/options.sh is enabled the data will be restored when the setup.sh is run or you can disable it and copy the files manually.
+Note: If the `restore_backup` option is enabled in the /config/options.sh file, the data will be automatically restored upon running the setup.sh script.
 
-*\* Make sure to modify the script according to your own configuration.*
+*Make sure to modify the script according to your configuration.*
