@@ -1,0 +1,3 @@
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
