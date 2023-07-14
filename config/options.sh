@@ -37,6 +37,9 @@ deb_packages=(
     gh
     git
     jpegoptim optipng
+    lm-sensors
+    nmap
+    plocate
     python3 python3-pip pypy3
     rsync
     ufw
@@ -53,31 +56,11 @@ deb_packages_remove=(
     gnome-calendar
     gnome-clocks
     gnome-contacts
+    gnome-games
     gnome-maps
     gnome-music
     gnome-sound-recorder
     gnome-weather
     shotwell
     yelp
-
-    gnome-games
-    aisleriot
-    five-or-more
-    four-in-a-row
-    gnome-2048
-    gnome-chess
-    gnome-klotski
-    gnome-mahjongg
-    gnome-mines
-    gnome-nibbles
-    gnome-robots
-    gnome-sudoku
-    gnome-taquin
-    gnome-tetravex
-    hitori
-    iagno
-    lightsoff
-    quadrapassel
-    swell-foop
-    tali
 )
