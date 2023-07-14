@@ -32,7 +32,7 @@ case $distro in
     cp $LOC/res/debian.bashrc ~/.bashrc
 
     sudo apt-get purge -y --autoremove ${deb_packages_remove[@]}
-    sudo apt-get upgrade -y
+    sudo apt-get update && sudo apt-get upgrade -y
     sudo apt-get install -y ${deb_packages[@]}
 
     # Configure firewall
