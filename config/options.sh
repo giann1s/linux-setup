@@ -44,7 +44,7 @@ deb_packages=(
 )
 deb_packages_remove=(
     firefox-esr
-    libreoffice*
+    libreoffice-common
     rhythmbox
     simple-scan
     transmission-common

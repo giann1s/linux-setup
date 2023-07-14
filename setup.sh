@@ -31,8 +31,7 @@ case $distro in
     # added to run the .bashrc files in ~/.bashrc.d
     cp $LOC/res/debian.bashrc ~/.bashrc
 
-    sudo apt-get purge -y ${deb_packages_remove[@]}
-    sudo apt-get autoremove -y --purge
+    sudo apt-get purge -y --autoremove ${deb_packages_remove[@]}
     sudo apt-get upgrade -y
     sudo apt-get install -y ${deb_packages[@]}
 
