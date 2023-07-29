@@ -14,10 +14,10 @@ flatpaks=(
     com.github.tchx84.Flatseal
     com.vscodium.codium
     io.github.shiftey.Desktop
+    io.gitlab.librewolf-community
     io.mpv.Mpv
     org.gimp.GIMP
     org.gnome.SimpleScan
-    org.mozilla.firefox
     org.jellyfin.JellyfinServer
     org.keepassxc.KeePassXC
     org.libreoffice.LibreOffice
@@ -34,14 +34,17 @@ dotconfig_dirs=(    # directories to backup
 deb_packages=(
     android-sdk-platform-tools
     autojump
+    ffmpeg
     gh
     git
     jpegoptim optipng
     lm-sensors
+    net-tools
     nmap
     plocate
     python3 python3-pip pypy3
     rsync
+    trash-cli
     ufw
     qemu-system virt-manager
 )

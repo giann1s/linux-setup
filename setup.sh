@@ -73,10 +73,10 @@ if [[ $use_flatpak ]] then
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak install -y ${flatpaks[@]}
 
-    # Firefox flatpak workaround for fonts (https://github.com/flatpak/flatpak/issues/4571)
-    mkdir -p ~/.var/app/org.mozilla.firefox/config/fontconfig/conf.d
-    rm -rf ~/.var/app/org.mozilla.firefox/config/fontconfig/conf.d/*
-    cp /etc/fonts/conf.d/*.conf ~/.var/app/org.mozilla.firefox/config/fontconfig/conf.d
+    # Firefox/Librewolf flatpak workaround for some fonts (https://github.com/flatpak/flatpak/issues/4571)
+    mkdir -p ~/.var/app/io.gitlab.librewolf-community/config/fontconfig/conf.d
+    rm -rf ~/.var/app/io.gitlab.librewolf-community/config/fontconfig/conf.d/*
+    cp /etc/fonts/conf.d/*.conf ~/.var/app/io.gitlab.librewolf-community/config/fontconfig/conf.d
 fi
 
 # Configuration files
