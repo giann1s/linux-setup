@@ -8,7 +8,7 @@ source $LOC/config/options.sh
 distro=$1
 
 # Verify arguments
-if [[ $# != 1 ]] || [[ ! " ${distros[*]} " =~ " ${distro} " ]] then
+if [[ $# != 1 ]] || [[ ! " ${distros[*]} " =~ " ${distro} " ]]; then
     exit
 fi
 
@@ -45,10 +45,10 @@ case $distro in
     sudo ufw allow 443/tcp
 
     sudo ufw limit 22/tcp           # SSH
-    
+
     sudo ufw enable
 
-    if [[ $set_governor ]] then
+    if [[ "$set_governor" == true ]]; then
         # Check current cpu governor
         # cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 
@@ -60,16 +60,16 @@ case $distro in
         sudo systemctl enable --now cpupower.service
     fi
 
-    if [[ $use_flatpak ]] then
+    if [[ "$use_flatpak" == true ]]; then
         sudo apt-get install -y flatpak
     fi
-    
+
     ;;
 
 esac
 
 # General configuration
-if [[ $use_flatpak ]] then
+if [[ "$use_flatpak" == true]]; then
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak install -y ${flatpaks[@]}
 
@@ -83,22 +83,22 @@ fi
 cp -r $LOC/config/bash/.bashrc.d ~/
 
 # Backup
-if [[ $restore_backup ]] then
+if [[ $restore_backup == true ]]; then
 
     # App data
     mkdir ~/.config &> /dev/null
     for data_dir in $(ls $LOC/config/app-data/dotconfig); do
-        if [[ -d ~/.config/$data_dir ]] then
+        if [[ -d ~/.config/$data_dir ]]; then
             rm -rf ~/.config/$data_dir
         fi
     done
     cp -r $LOC/config/app-data/dotconfig/* ~/.config
 
     # Flatpaks data
-    if [[ $(ls $LOC/config/app-data/flatpaks-data) != "" ]] then
+    if [[ $(ls $LOC/config/app-data/flatpaks-data) != "" ]]; then
         mkdir -p ~/.var/app
         for flatpak_id in $(ls $LOC/config/app-data/flatpaks-data); do
-            if [[ -d ~/.var/app/$flatpak_id ]] then
+            if [[ -d ~/.var/app/$flatpak_id ]]; then
                 rm -rf ~/.var/app/$flatpak_id
             fi
         done

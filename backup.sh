@@ -5,11 +5,11 @@ LOC=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 source $LOC/config/options.sh
 
 # Verify arguments
-if [[ $# -gt 1 ]] || [[ $1 != @(""|"delete") ]] then
+if [[ $# -gt 1 ]] || [[ $1 != @(""|"delete") ]]; then
     exit
 fi
 
-if [[ $1 == "delete" ]] then
+if [[ "$1" == "delete" ]]; then
     rm -rf $LOC/config/app-data/dotconfig/*
     rm -rf $LOC/config/app-data/flatpaks-data/*
     exit

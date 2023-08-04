@@ -4,7 +4,9 @@ distros=(
     debian
 )
 
-# Common
+# Common options
+DE="gnome"
+
 set_governor="true"
 cpu_governor="powersave"
 
@@ -18,7 +20,6 @@ flatpaks=(
     io.mpv.Mpv
     org.gimp.GIMP
     org.gnome.SimpleScan
-    org.jellyfin.JellyfinServer
     org.keepassxc.KeePassXC
     org.libreoffice.LibreOffice
     org.qbittorrent.qBittorrent
@@ -34,6 +35,7 @@ dotconfig_dirs=(    # directories to backup
 deb_packages=(
     android-sdk-platform-tools
     autojump
+    curl
     ffmpeg
     gh
     git
@@ -42,28 +44,37 @@ deb_packages=(
     net-tools
     nmap
     plocate
-    python3 python3-pip pypy3
+    python3 python3-venv python-is-python3 pypy3
     rsync
     trash-cli
     ufw
     qemu-system virt-manager
 )
-deb_packages_remove=(
-    firefox-esr
-    libreoffice-common
-    rhythmbox
-    simple-scan
-    transmission-common
+deb_packages_remove=()
 
-    evolution
-    gnome-calendar
-    gnome-clocks
-    gnome-contacts
-    gnome-games
-    gnome-maps
-    gnome-music
-    gnome-sound-recorder
-    gnome-weather
-    shotwell
-    yelp
-)
+case $DE in
+
+"gnome")
+    deb_packages_remove+=(
+        firefox-esr
+        libreoffice-common
+        rhythmbox
+        simple-scan
+        transmission-common
+
+        evolution
+        gnome-calendar
+        gnome-clocks
+        gnome-contacts
+        gnome-games
+        gnome-maps
+        gnome-music
+        gnome-sound-recorder
+        gnome-weather
+        shotwell
+        totem
+        yelp
+    )
+    ;;
+
+esac
