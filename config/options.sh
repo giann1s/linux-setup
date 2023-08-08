@@ -64,6 +64,7 @@ case $DE in
         libreoffice-common
         rhythmbox
         simple-scan
+        synaptic
         transmission-common
 
         evolution
