@@ -56,6 +56,10 @@ case $DE in
 
 "gnome")
     deb_packages_remove+=(
+        ffmpegthumbnailer   # Replacement for totem-video-thumbnailer
+    )
+
+    deb_packages_remove+=(
         firefox-esr
         libreoffice-common
         rhythmbox
