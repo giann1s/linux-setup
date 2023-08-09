@@ -1,10 +1,6 @@
 # Check if flatpak is installed
 flatpak --version &> /dev/null || return
 
-# flatpak creates symlinks of apps in /var/lib/flatpak/exports/bin/
-# for user-specific apps (installed with --user) they are located in ~/.local/share/flatpak/exports/bin
-PATH="/var/lib/flatpak/exports/bin:$PATH"
-
 declare -A id_catalog=(
     [cc.arduino.IDE2]=arduino
     [com.github.tchx84.Flatseal]=flatseal
@@ -26,7 +22,7 @@ declare -A id_catalog=(
 )
 
 for id in $(ls /var/lib/flatpak/exports/bin); do
-    if [[ ${id_catalog[$id]} ]] then
-        alias ${id_catalog[$id]}=$id
+    if [[ ${id_catalog[$id]} ]]; then
+        alias ${id_catalog[$id]}="flatpak run $id"
     fi
 done
