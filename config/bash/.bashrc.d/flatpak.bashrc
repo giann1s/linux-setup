@@ -12,6 +12,7 @@ declare -A id_catalog=(
     [io.gitlab.librewolf-community]=librewolf
     [org.gimp.GIMP]=gimp
     [org.gnome.SimpleScan]=simple-scan
+    [org.gnome.TextEditor]=gnome-text-editor
     [org.jellyfin.JellyfinServer]=jellyfin
     [org.keepassxc.KeePassXC]=keepassxc
     [org.libreoffice.LibreOffice]=libreoffice

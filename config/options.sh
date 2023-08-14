@@ -31,55 +31,69 @@ dotconfig_dirs=(    # directories to backup
     gh
 )
 
-# Debian-specific options
-deb_packages=(
-    android-sdk-platform-tools
-    autojump
-    curl
-    ffmpeg
-    gh
-    git
-    jpegoptim optipng
-    lm-sensors
-    net-tools
-    nmap
-    plocate
-    python3 python3-venv python-is-python3 pypy3
-    rsync
-    trash-cli
-    ufw
-    qemu-system virt-manager
-)
-deb_packages_remove=()
+case $distro in
 
-case $DE in
+"debian")
 
-"gnome")
-    deb_packages_remove+=(
-        ffmpegthumbnailer   # Replacement for totem-video-thumbnailer
+    packages=(
+        android-sdk-platform-tools
+        autojump
+        curl
+        ffmpeg
+        gh
+        git
+        jpegoptim optipng
+        lm-sensors
+        net-tools
+        nmap
+        plocate
+        python3 python3-venv python-is-python3 pypy3
+        rsync
+        trash-cli
+        ufw
+        qemu-system virt-manager
     )
+    packages_remove=()
 
-    deb_packages_remove+=(
-        firefox-esr
-        libreoffice-common
-        rhythmbox
-        simple-scan
-        synaptic
-        transmission-common
+    case $DE in
 
-        evolution
-        gnome-calendar
-        gnome-clocks
-        gnome-contacts
-        gnome-games
-        gnome-maps
-        gnome-music
-        gnome-sound-recorder
-        gnome-weather
-        shotwell
-        totem
-        yelp
-    )
+    "gnome")
+
+        packages+=(
+            ffmpegthumbnailer   # Replacement for totem-video-thumbnailer
+        )
+
+        packages_remove+=(
+            firefox-esr
+            libreoffice-common
+            rhythmbox
+            simple-scan
+            synaptic
+            transmission-common
+
+            evolution
+            gnome-calendar
+            gnome-clocks
+            gnome-contacts
+            gnome-games
+            gnome-maps
+            gnome-music
+            gnome-sound-recorder
+            gnome-weather
+            shotwell
+            totem
+            yelp
+
+            # replace with flatpak
+            gnome-text-editor
+        )
+
+        flatpaks+=(
+            org.gnome.TextEditor
+        )
+        ;;
+
+    esac
     ;;
 
 esac

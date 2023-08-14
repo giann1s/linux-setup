@@ -3,9 +3,9 @@
 # Location of script
 LOC=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-source $LOC/config/options.sh
-
 distro=$1
+
+source $LOC/config/options.sh
 
 # Verify arguments
 if [[ $# != 1 ]] || [[ ! " ${distros[*]} " =~ " ${distro} " ]]; then
@@ -31,9 +31,9 @@ case $distro in
     # added to run the .bashrc files in ~/.bashrc.d
     cp $LOC/res/debian.bashrc ~/.bashrc
 
-    sudo apt-get purge -y --auto-remove ${deb_packages_remove[@]}
+    sudo apt-get purge -y --auto-remove ${packages_remove[@]}
     sudo apt-get update && sudo apt-get upgrade -y
-    sudo apt-get install -y ${deb_packages[@]}
+    sudo apt-get install -y ${packages[@]}
 
     # Configure firewall
     echo "Configuring firewall..."
@@ -69,7 +69,7 @@ case $distro in
 esac
 
 # General configuration
-if [[ "$use_flatpak" == true]]; then
+if [[ "$use_flatpak" == true ]]; then
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak install -y ${flatpaks[@]}
 
