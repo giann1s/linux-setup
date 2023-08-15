@@ -46,6 +46,7 @@ case $distro in
         lm-sensors
         net-tools
         nmap
+        nodejs npm
         plocate
         python3 python3-venv python-is-python3 pypy3
         rsync
