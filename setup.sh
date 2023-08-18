@@ -36,10 +36,12 @@ case $distro in
     # so an alias is necessary to use bat with the regular command.
     mkdir -p ~/.bashrc.d
     cp $LOC/res/debian/bat.bashrc ~/.bashrc.d
-
-    sudo apt-get purge -y --auto-remove ${packages_remove[@]}
-    sudo apt-get update && sudo apt-get upgrade -y
-    sudo apt-get install -y ${packages[@]}
+    
+    sudo apt-get install nala -y
+    sudo nala purge -y --autoremove ${packages_remove[@]}
+    sudo nala upgrade -y
+    sudo nala install -y ${packages[@]}
+    sudo nala clean
 
     # Configure firewall
     echo "Configuring firewall..."
