@@ -67,29 +67,38 @@ case $distro in
         packages_remove+=(
             firefox-esr
             libreoffice-common
-            rhythmbox
-            simple-scan
             synaptic
             transmission-common
 
+            baobab
+            eog
+            evince
             evolution
+            file-roller
             gnome-calendar
+            gnome-characters
             gnome-clocks
             gnome-contacts
+            gnome-font-viewer
             gnome-games
+            gnome-logs
             gnome-maps
             gnome-music
             gnome-sound-recorder
+            gnome-text-editor
             gnome-weather
+            rhythmbox
+            seahorse
             shotwell
+            simple-scan
             totem
             yelp
-
-            # replace with flatpak
-            gnome-text-editor
         )
 
         flatpaks+=(
+            org.gnome.Evince
+            org.gnome.FileRoller
+            org.gnome.Loupe
             org.gnome.TextEditor
         )
         ;;
