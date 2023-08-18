@@ -71,7 +71,7 @@ esac
 # General configuration
 if [[ "$use_flatpak" == true ]]; then
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    flatpak install -y ${flatpaks[@]}
+    flatpak install flathub -y ${flatpaks[@]}
 
     # Firefox/Librewolf flatpak workaround for some fonts (https://github.com/flatpak/flatpak/issues/4571)
     mkdir -p ~/.var/app/io.gitlab.librewolf-community/config/fontconfig/conf.d
