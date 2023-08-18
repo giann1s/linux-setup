@@ -38,6 +38,7 @@ case $distro in
     packages=(
         android-sdk-platform-tools
         autojump
+        bat
         curl
         ffmpeg
         gh
