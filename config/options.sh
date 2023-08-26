@@ -52,6 +52,7 @@ case $distro in
         plocate
         python3 python3-venv python-is-python3 pypy3
         rsync
+        tldr
         trash-cli
         ufw
         qemu-system virt-manager
