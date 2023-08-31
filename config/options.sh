@@ -87,6 +87,7 @@ case $distro in
             gnome-logs
             gnome-maps
             gnome-music
+            gnome-shell-extension-prefs
             gnome-sound-recorder
             gnome-text-editor
             gnome-weather
@@ -100,6 +101,7 @@ case $distro in
 
         flatpaks+=(
             org.gnome.Evince
+            org.gnome.Extensions
             org.gnome.FileRoller
             org.gnome.Loupe
             org.gnome.TextEditor
