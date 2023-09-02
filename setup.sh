@@ -79,6 +79,11 @@ case $distro in
 esac
 
 # General configuration
+
+# Install Rust
+sh <(curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs) -y --no-modify-path
+
+# Configure Flatpak
 if [[ "$use_flatpak" == true ]]; then
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak install flathub -y ${flatpaks[@]}
