@@ -49,12 +49,13 @@ case $distro in
     sudo ufw default deny incoming  # Default Rules
     sudo ufw default allow outgoing
 
-    sudo ufw allow 80/tcp           # HTTP / HTTPS
+    sudo ufw allow 80/tcp   # HTTP / HTTPS
     sudo ufw allow 443/tcp
 
-    sudo ufw limit 22/tcp           # SSH
+    sudo ufw limit 22/tcp   # SSH
 
-    sudo ufw allow 42000 42001      # Warpinator
+    sudo ufw allow 42000    # Warpinator
+    sudo ufw allow 42001
 
     sudo ufw enable
 
