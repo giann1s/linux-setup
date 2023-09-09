@@ -37,6 +37,12 @@ case $distro in
     mkdir -p ~/.bashrc.d
     cp $LOC/res/debian/bat.bashrc ~/.bashrc.d
     
+    # Add VSCodium Repository
+    wget --inet4-only -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
+    | sudo gpg --dearmor -o /usr/share/keyrings/vscodium-archive-keyring.gpg --yes
+    echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
+    | sudo dd of=/etc/apt/sources.list.d/vscodium.list status=none
+
     sudo apt-get install nala -y
     sudo nala purge -y --autoremove ${packages_remove[@]}
     sudo nala upgrade -y

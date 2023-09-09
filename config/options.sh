@@ -14,7 +14,6 @@ use_flatpak=true    # Requires flatpak to be installed
 flatpaks=(
     cc.arduino.IDE2
     com.github.tchx84.Flatseal
-    com.vscodium.codium
     io.github.shiftey.Desktop
     io.gitlab.librewolf-community
     io.mpv.Mpv
@@ -39,6 +38,7 @@ case $distro in
         android-sdk-platform-tools
         autojump
         bat
+        codium
         curl
         ffmpeg
         gh
