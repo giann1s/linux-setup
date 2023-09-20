@@ -100,7 +100,6 @@ case $distro in
         )
 
         flatpaks+=(
-            org.gnome.Evince
             org.gnome.Extensions
             org.gnome.FileRoller
             org.gnome.Loupe
