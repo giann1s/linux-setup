@@ -77,7 +77,7 @@ case $distro in
             eog
             evince
             evolution
-            file-roller
+            #file-roller
             gnome-calendar
             gnome-characters
             gnome-clocks
@@ -87,9 +87,9 @@ case $distro in
             gnome-logs
             gnome-maps
             gnome-music
-            gnome-shell-extension-prefs
+            #gnome-shell-extension-prefs
             gnome-sound-recorder
-            gnome-text-editor
+            #gnome-text-editor
             gnome-weather
             rhythmbox
             seahorse
@@ -100,10 +100,7 @@ case $distro in
         )
 
         flatpaks+=(
-            org.gnome.Extensions
-            org.gnome.FileRoller
             org.gnome.Loupe
-            org.gnome.TextEditor
         )
         ;;
 
