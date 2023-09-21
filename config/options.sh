@@ -65,6 +65,7 @@ case $distro in
 
         packages+=(
             ffmpegthumbnailer   # Replacement for totem-video-thumbnailer
+            gnome-software-plugin-flatpak
         )
 
         packages_remove+=(
