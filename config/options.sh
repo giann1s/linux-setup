@@ -10,8 +10,7 @@ DE="gnome"
 set_governor="true"
 cpu_governor="powersave"
 
-use_flatpak=true    # Requires flatpak to be installed
-flatpaks=(
+flatpaks=(  # Requires flatpak to be installed (make sure to include it in your packages list)
     cc.arduino.IDE2
     com.github.tchx84.Flatseal
     io.github.shiftey.Desktop
@@ -41,6 +40,7 @@ case $distro in
         codium
         curl
         ffmpeg
+        flatpak
         gh
         git
         jpegoptim optipng

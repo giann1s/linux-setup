@@ -77,10 +77,6 @@ case $distro in
         sudo systemctl enable --now cpupower.service
     fi
 
-    if [[ "$use_flatpak" == true ]]; then
-        sudo apt-get install -y flatpak
-    fi
-
     ;;
 
 esac
@@ -91,11 +87,11 @@ esac
 sh <(curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs) -y --no-modify-path
 
 # Configure Flatpak
-if [[ "$use_flatpak" == true ]]; then
+if [[ " ${packages[*]} " =~ " flatpak " ]]; then
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak install flathub -y ${flatpaks[@]}
 
-    # Firefox/Librewolf flatpak workaround for some fonts (https://github.com/flatpak/flatpak/issues/4571)
+    # Firefox/Librewolf flatpak workaround for some fonts. It's fixed on debian testing (trixie). Github issue: https://github.com/flatpak/flatpak/issues/4571
     mkdir -p ~/.var/app/io.gitlab.librewolf-community/config/fontconfig/conf.d
     rm -rf ~/.var/app/io.gitlab.librewolf-community/config/fontconfig/conf.d/*
     cp /etc/fonts/conf.d/*.conf ~/.var/app/io.gitlab.librewolf-community/config/fontconfig/conf.d
