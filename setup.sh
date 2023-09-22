@@ -100,26 +100,17 @@ fi
 # Configuration files
 cp -r $LOC/config/bash/.bashrc.d ~/
 
-# Backup
-if [[ $restore_backup == true ]]; then
-
-    # App data
-    mkdir ~/.config &> /dev/null
-    for data_dir in $(ls $LOC/config/app-data/dotconfig); do
-        if [[ -d ~/.config/$data_dir ]]; then
-            rm -rf ~/.config/$data_dir
-        fi
+if [[ "$auto_restore_backup" == true ]]; then
+    chmod a+x $LOC/backup.sh
+    $LOC/backup.sh restore
+else
+    echo "Do you want to restore the backup now?"
+    select yn in "Yes" "No"; do
+        case $yn in
+            Yes ) $LOC/backup.sh restore; break;;
+            No ) break;;
+        esac
     done
-    cp -r $LOC/config/app-data/dotconfig/* ~/.config
-
-    # Flatpaks data
-    if [[ $(ls $LOC/config/app-data/flatpaks-data) != "" ]]; then
-        mkdir -p ~/.var/app
-        for flatpak_id in $(ls $LOC/config/app-data/flatpaks-data); do
-            if [[ -d ~/.var/app/$flatpak_id ]]; then
-                rm -rf ~/.var/app/$flatpak_id
-            fi
-        done
-        cp -r $LOC/config/app-data/flatpaks-data/* ~/.var/app
-    fi
 fi
+
+echo "Setup Completed!"

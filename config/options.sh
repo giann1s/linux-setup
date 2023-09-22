@@ -24,7 +24,7 @@ flatpaks=(  # Requires flatpak to be installed (make sure to include it in your 
     org.x.Warpinator
 )
 
-restore_backup=true
+auto_restore_backup=false
 dotconfig_dirs=(    # directories to backup
     gh
 )

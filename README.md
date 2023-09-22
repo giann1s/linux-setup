@@ -14,10 +14,9 @@ To make a backup of your apps (including flatpaks) execute the backup.sh script 
 
     bash ./backup.sh
 
-To delete the backup pass the `delete` argument to backup.sh.
+To restore/delete the backup pass the `restore` or `delete` argument accordingly to backup.sh.
 
+    bash ./backup.sh restore
     bash ./backup.sh delete
 
-Note: If the `restore_backup` option is enabled in the /config/options.sh file, the data will be automatically restored upon running the setup.sh script.
-
-*Make sure to modify the script according to your configuration.*
+Note: If the `auto_restore_backup` option is enabled in the /config/options.sh file, the data will be automatically restored upon running the setup.sh script.
