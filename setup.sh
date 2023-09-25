@@ -26,10 +26,8 @@ sudo true
 case $distro in
 
 "debian")
-
-    # This is the defualt .bashrc with a few lines
-    # added to run the .bashrc files in ~/.bashrc.d
-    cp $LOC/res/debian/.bashrc ~
+    # Extend .bashrc to execute the rc files in ~/.bashrc.d
+    cp /etc/skel/.bashrc ~ && echo >> ~/.bashrc && cat $LOC/res/run_rcs.bashrc >> ~/.bashrc
 
     # The bat executable have been renamed from ‘bat’ to ‘batcat’
     # because of a file name clash with another Debian package,
