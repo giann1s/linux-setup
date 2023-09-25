@@ -43,11 +43,11 @@ case $distro in
     echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
     | sudo dd of=/etc/apt/sources.list.d/vscodium.list status=none
 
-    sudo apt-get install nala -y
-    sudo nala purge -y --autoremove ${packages_remove[@]}
-    sudo nala upgrade -y
-    sudo nala install -y ${packages[@]}
-    sudo nala clean
+    sudo apt-get update
+    sudo apt-get purge -y --autoremove ${packages_remove[@]}
+    sudo apt-get upgrade -y
+    sudo apt-get install -y ${packages[@]}
+    sudo apt-get clean
 
     # Configure firewall
     echo "Configuring firewall..."

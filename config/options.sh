@@ -45,7 +45,6 @@ case $distro in
         git
         jpegoptim optipng
         lm-sensors
-        nala
         net-tools
         nmap
         nodejs npm
