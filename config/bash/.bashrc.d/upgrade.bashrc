@@ -7,6 +7,6 @@ upgrade () {
     fi
 
     if flatpak --version &> /dev/null; then
-        flatpak upgrade
+        flatpak upgrade --assumeyes
     fi
 }
