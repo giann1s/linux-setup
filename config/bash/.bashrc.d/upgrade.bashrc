@@ -3,8 +3,7 @@ upgrade () {
         sudo apt-get update && \
         sudo apt-get upgrade --assume-yes && \
         sudo apt-get autoremove --purge --assume-yes
-
-    fi
+    fi && \
 
     if flatpak --version &> /dev/null; then
         flatpak upgrade --assumeyes
