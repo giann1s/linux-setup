@@ -2,7 +2,7 @@
 
 Clone the repo and make the scripts executable:
 
-    git clone https://github.com/Giann1s/linux-setup.git &&
+    git clone https://github.com/giann1s/linux-setup.git &&
     cd ./linux-setup && chmod a+x setup.sh & chmod a+x backup.sh
 
 then launch the script by running:
