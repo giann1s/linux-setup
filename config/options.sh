@@ -49,6 +49,7 @@ case $distro in
         nmap
         nodejs npm
         plocate
+        podman
         python3 python3-venv python-is-python3 pypy3
         rsync
         tldr
