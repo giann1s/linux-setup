@@ -34,7 +34,7 @@ case $distro in
 "debian")
 
     packages=(
-        android-sdk-platform-tools
+        adb fastboot
         autojump
         bat
         codium
