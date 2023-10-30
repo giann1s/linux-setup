@@ -20,8 +20,8 @@ flatpaks=(  # Requires flatpak to be installed (make sure to include it in your 
     org.gnome.SimpleScan
     org.keepassxc.KeePassXC
     org.libreoffice.LibreOffice
+    org.localsend.localsend_app
     org.qbittorrent.qBittorrent
-    org.x.Warpinator
 )
 
 auto_restore_backup=false

@@ -58,9 +58,6 @@ case $distro in
 
     sudo ufw limit 22/tcp   # SSH
 
-    sudo ufw allow 42000    # Warpinator
-    sudo ufw allow 42001
-
     sudo ufw enable
 
     if [[ "$set_governor" == true ]]; then

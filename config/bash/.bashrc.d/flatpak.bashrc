@@ -19,10 +19,10 @@ declare -A id_catalog=(
     [org.jellyfin.JellyfinServer]=jellyfin
     [org.keepassxc.KeePassXC]=keepassxc
     [org.libreoffice.LibreOffice]=libreoffice
+    [org.localsend.localsend_app]=localsend
     [org.mozilla.firefox]=firefox
     [org.qbittorrent.qBittorrent]=qbittorrent
     [org.texstudio.TeXstudio]=texstudio
-    [org.x.Warpinator]=warpinator
 )
 
 for id in $(ls /var/lib/flatpak/exports/bin); do
