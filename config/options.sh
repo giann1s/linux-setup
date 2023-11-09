@@ -76,7 +76,7 @@ case $distro in
 
             baobab
             eog
-            evince
+            #evince
             evolution
             #file-roller
             gnome-calendar
