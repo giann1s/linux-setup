@@ -5,6 +5,7 @@ declare -A id_catalog=(
     [cc.arduino.IDE2]=arduino
     [com.github.tchx84.Flatseal]=flatseal
     [com.obsproject.Studio]=obs
+    [com.usebottles.bottles]=bottles
     [com.vscodium.codium]=codium
     [fr.handbrake.ghb]=handbrake
     [io.mpv.Mpv]=mpv

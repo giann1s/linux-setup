@@ -13,6 +13,7 @@ cpu_governor="powersave"
 flatpaks=(  # Requires flatpak to be installed (make sure to include it in your packages list)
     cc.arduino.IDE2
     com.github.tchx84.Flatseal
+    com.usebottles.bottles
     io.github.shiftey.Desktop
     io.gitlab.librewolf-community
     io.mpv.Mpv
