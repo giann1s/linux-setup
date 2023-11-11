@@ -46,6 +46,7 @@ case $distro in
         git
         jpegoptim optipng
         lm-sensors
+        mingw-w64
         net-tools
         nmap
         nodejs npm
@@ -57,6 +58,7 @@ case $distro in
         trash-cli
         ufw
         qemu-system virt-manager
+        wine
     )
     packages_remove=()
 
