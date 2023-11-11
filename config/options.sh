@@ -78,6 +78,7 @@ case $distro in
             transmission-common
 
             baobab
+            cheese
             eog
             #evince
             evolution
@@ -105,6 +106,7 @@ case $distro in
 
         flatpaks+=(
             org.gnome.Loupe
+            org.gnome.Snapshot
         )
         ;;
 
