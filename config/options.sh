@@ -23,6 +23,8 @@ flatpaks=(  # Requires flatpak to be installed (make sure to include it in your 
     org.libreoffice.LibreOffice
     org.localsend.localsend_app
     org.qbittorrent.qBittorrent
+
+    com.discordapp.Discord
 )
 
 auto_restore_backup=false

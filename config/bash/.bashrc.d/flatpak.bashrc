@@ -25,6 +25,8 @@ declare -A id_catalog=(
     [org.mozilla.firefox]=firefox
     [org.qbittorrent.qBittorrent]=qbittorrent
     [org.texstudio.TeXstudio]=texstudio
+
+    [com.discordapp.Discord]=discord
 )
 
 for id in $(ls /var/lib/flatpak/exports/bin); do
