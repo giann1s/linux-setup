@@ -47,6 +47,7 @@ case $distro in
         gh
         git
         jpegoptim optipng
+        latexmk
         lm-sensors
         mingw-w64
         net-tools
