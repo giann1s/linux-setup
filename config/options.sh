@@ -47,7 +47,7 @@ case $distro in
         gh
         git
         jpegoptim optipng
-        latexmk
+        texlive texlive-lang-greek latexmk
         lm-sensors
         mingw-w64
         net-tools
