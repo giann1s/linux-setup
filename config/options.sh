@@ -70,8 +70,6 @@ case $distro in
     "gnome")
 
         packages+=(
-            org.gnome.Geary
-
             ffmpegthumbnailer   # Replacement for totem-video-thumbnailer
             gnome-software-plugin-flatpak
         )
@@ -110,6 +108,7 @@ case $distro in
         )
 
         flatpaks+=(
+            org.gnome.Geary
             org.gnome.Loupe
             org.gnome.Snapshot
         )
