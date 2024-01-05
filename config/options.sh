@@ -109,6 +109,8 @@ case $distro in
 
         flatpaks+=(
             org.gnome.Geary
+            io.gitlab.news_flash.NewsFlash
+
             org.gnome.Loupe
             org.gnome.Snapshot
         )
