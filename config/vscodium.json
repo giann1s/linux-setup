@@ -1,0 +1,37 @@
+{
+    "window.titleBarStyle": "custom",
+    "workbench.startupEditor": "none",
+    "editor.rulers": [100],
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.autoSave": "afterDelay",
+
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "/app/bin/host-spawn",
+            "args": ["bash"],
+            "icon": "terminal-bash",
+            "overrideName": true
+        }
+    },
+
+    "cSpell.language": "en,el",
+
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "/app/bin/host-spawn",
+            "args": [
+                "latexmk",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+                ],
+            "env": {}
+        }
+    ]
+}

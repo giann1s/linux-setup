@@ -1,0 +1,50 @@
+[colors.bright]
+black = "#666666"
+blue = "#3B8EEA"
+cyan = "#29B8DB"
+green = "#23D18B"
+magenta = "#D670D6"
+red = "#F14C4C"
+white = "#E5E5E5"
+yellow = "#F5F543"
+
+[colors.normal]
+black = "#000000"
+blue = "#2472C8"
+cyan = "#11A8CD"
+green = "#0DBC79"
+magenta = "#BC3FBC"
+red = "#CD3131"
+white = "#E5E5E5"
+yellow = "#E5E510"
+
+[colors.primary]
+background = "#181818"
+
+[cursor]
+blink_timeout = 0
+unfocused_hollow = false
+
+[cursor.style]
+blinking = "always"
+shape = "beam"
+
+[font]
+size = 14.0
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "Q"
+mods = "Control"
+
+[selection]
+save_to_clipboard = true
+
+[window]
+decorations = "none"
+opacity = 0.7
+#startup_mode = "maximized"
+
+[window.padding]
+x = 15
+y = 10
