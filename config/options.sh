@@ -178,15 +178,18 @@ case $distro in
             packages+=(
                 evince
                 file-roller
+                gdm
                 gnome-backgrounds
                 gnome-control-center
                 gnome-disk-utility
+                gnome-shell
                 gnome-text-editor
                 gvfs-gphoto2
                 gvfs-mtp
                 gvfs-nfs
                 gvfs-smb
                 nautilus
+                xdg-desktop-portal-gnome
 
                 ffmpegthumbnailer   # Replacement for totem-video-thumbnailer
             )

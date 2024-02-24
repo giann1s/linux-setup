@@ -52,7 +52,8 @@ case $distro in
     sudo pacman -Syu --noconfirm
     sudo pacman -S --needed --noconfirm ${packages[@]}
 
-    systemctl enable --now virtqemud
+    sudo systemctl enable --now virtqemud
+    sudo systemctl enable gdm
 
     configure_ufw
 
@@ -146,4 +147,4 @@ else
     done
 fi
 
-echo "Setup Completed!"
+echo -e 'Setup Completed!\nSome changes may require a reboot.'
