@@ -79,6 +79,7 @@ case $distro in
         tldr
         trash-cli
         ufw
+        wget
         wine
         zoxide
     )
@@ -167,6 +168,7 @@ case $distro in
             tldr
             trash-cli
             ufw
+            wget
             zoxide
         )
         packages_remove=()
