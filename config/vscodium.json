@@ -2,6 +2,7 @@
     "window.titleBarStyle": "custom",
     "workbench.startupEditor": "none",
     "editor.rulers": [100],
+    "terminal.integrated.copyOnSelection": true,
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     "files.autoSave": "afterDelay",
