@@ -120,6 +120,7 @@ case $distro in
             gnome-shell-extensions  # Default extensions
             #gnome-shell-extension-prefs # Tool to manage extensions
             gnome-sound-recorder
+            #gnome-system-monitor
             gnome-terminal
             #gnome-text-editor
             gnome-weather
@@ -186,6 +187,7 @@ case $distro in
                 file-roller
                 gnome-control-center
                 gnome-disk-utility
+                gnome-system-monitor
                 gnome-text-editor
                 nautilus gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb
 
