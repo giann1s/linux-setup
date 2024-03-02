@@ -12,12 +12,7 @@ declare -A id_catalog=(
     [io.github.shiftey.Desktop]=github
     [io.gitlab.librewolf-community]=librewolf
     [org.gimp.GIMP]=gimp
-    [org.gnome.Evince]=evince
-    [org.gnome.FileRoller]=file-roller
-    [org.gnome.Loupe]=loupe
     [org.gnome.SimpleScan]=simple-scan
-    [org.gnome.Snapshot]=snapshot
-    [org.gnome.TextEditor]=gnome-text-editor
     [org.jellyfin.JellyfinServer]=jellyfin
     [org.keepassxc.KeePassXC]=keepassxc
     [org.libreoffice.LibreOffice]=libreoffice
@@ -25,6 +20,17 @@ declare -A id_catalog=(
     [org.mozilla.firefox]=firefox
     [org.qbittorrent.qBittorrent]=qbittorrent
     [org.texstudio.TeXstudio]=texstudio
+
+    # Gnome
+    [io.github.celluloid_player.Celluloid]=celluloid
+    [io.gitlab.news_flash.NewsFlash]=newsflash
+    [org.gnome.Evince]=evince
+    [org.gnome.FileRoller]=file-roller
+    [org.gnome.Fractal]=fractal
+    [org.gnome.Geary]=geary
+    [org.gnome.Loupe]=loupe
+    [org.gnome.Snapshot]=snapshot
+    [org.gnome.TextEditor]=gnome-text-editor
 
     [com.discordapp.Discord]=discord
 )

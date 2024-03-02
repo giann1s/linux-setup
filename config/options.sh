@@ -37,10 +37,11 @@ case $DE in
 
 "gnome")
     flatpaks+=(
-        org.gnome.Geary
         io.github.celluloid_player.Celluloid
         io.gitlab.news_flash.NewsFlash
-
+        org.gnome.Evince
+        org.gnome.Fractal
+        org.gnome.Geary
         org.gnome.Loupe
         org.gnome.Snapshot
     )
@@ -102,7 +103,7 @@ case $distro in
             baobab
             cheese
             eog
-            #evince
+            evince
             evolution
             #file-roller
             #gnome-backgrounds
@@ -183,7 +184,6 @@ case $distro in
                 gnome-tweaks gnome-themes-extra
                 xdg-desktop-portal-gnome
 
-                evince
                 file-roller
                 gnome-control-center
                 gnome-disk-utility
