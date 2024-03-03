@@ -17,7 +17,15 @@
         }
     },
 
-    "cSpell.language": "en,el",
+    "redhat.telemetry.enabled": false,
+
+    "java.configuration.runtimes": [
+        {
+          "name": "JavaSE-21",
+          "path": "/run/host/usr/lib/jvm/java-21-openjdk/",
+          "default": true
+        }
+    ],
 
     "latex-workshop.latex.tools": [
         {
@@ -34,5 +42,7 @@
                 ],
             "env": {}
         }
-    ]
+    ],
+
+    "cSpell.language": "en,el"
 }

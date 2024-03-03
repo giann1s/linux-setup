@@ -27,6 +27,7 @@ Note: If the `auto_restore_backup` option is enabled in the /config/options.sh f
 
 - Live Preview
 - C/C++ Themes
+- Language Support for Java(TM) by Red Hat
 - Python, Pylint, Mypy Type Checker, isort
 - Prettier - Code formatter
 - rust-analyzer
