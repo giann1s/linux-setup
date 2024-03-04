@@ -60,6 +60,7 @@ case $distro in
             curl
             ffmpeg
             flatpak
+            fzf
             gh
             git
             jpegoptim optipng
@@ -151,6 +152,7 @@ case $distro in
             curl
             ffmpeg
             flatpak
+            fzf
             github-cli
             git
             jpegoptim optipng
