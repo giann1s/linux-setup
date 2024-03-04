@@ -51,92 +51,92 @@ esac
 
 case $distro in
 
-"debian")
+    "debian")
 
-    packages=(
-        adb fastboot
-        alacritty
-        bat
-        curl
-        ffmpeg
-        flatpak
-        gh
-        git
-        jpegoptim optipng
-        texlive-latex-base texlive-latex-recommended texlive-fonts-recommended latexmk texlive-lang-greek
-        less
-        linux-cpupower
-        lm-sensors
-        mingw-w64
-        net-tools
-        nmap
-        nodejs npm
-        plocate
-        podman podman-compose
-        python3 python3-venv python-is-python3 pypy3
-        qemu-system-x86 virt-manager
-        rsync
-        smartmontools
-        tldr
-        trash-cli
-        ufw
-        wget
-        wine
-        zoxide
-    )
-    packages_remove=()
-
-    case $DE in
-
-    "gnome")
-
-        packages+=(
-            ffmpegthumbnailer   # Replacement for totem-video-thumbnailer
+        packages=(
+            adb fastboot
+            alacritty
+            bat
+            curl
+            ffmpeg
+            flatpak
+            gh
+            git
+            jpegoptim optipng
+            texlive-latex-base texlive-latex-recommended texlive-fonts-recommended latexmk texlive-lang-greek
+            less
+            linux-cpupower
+            lm-sensors
+            mingw-w64
+            net-tools
+            nmap
+            nodejs npm
+            plocate
+            podman podman-compose
+            python3 python3-venv python-is-python3 pypy3
+            qemu-system-x86 virt-manager
+            rsync
+            smartmontools
+            tldr
+            trash-cli
+            ufw
+            wget
+            wine
+            zoxide
         )
+        packages_remove=()
 
-        packages_remove+=(
-            firefox-esr
-            libreoffice-common
-            synaptic
-            transmission-common
+        case $DE in
 
-            baobab
-            cheese
-            eog
-            evince
-            evolution
-            #file-roller
-            #gnome-backgrounds
-            gnome-calendar
-            gnome-characters
-            gnome-clocks
-            gnome-contacts
-            #gnome-control-center
-            #gnome-disk-utility
-            gnome-font-viewer
-            gnome-games
-            gnome-logs
-            gnome-maps
-            gnome-music
-            gnome-shell-extensions  # Default extensions
-            #gnome-shell-extension-prefs # Tool to manage extensions
-            gnome-sound-recorder
-            #gnome-system-monitor
-            gnome-terminal
-            #gnome-text-editor
-            gnome-weather
-            #nautilus
-            rhythmbox
-            seahorse
-            shotwell
-            simple-scan
-            totem
-            yelp
-        )
+            "gnome")
+
+                packages+=(
+                    ffmpegthumbnailer   # Replacement for totem-video-thumbnailer
+                )
+
+                packages_remove+=(
+                    firefox-esr
+                    libreoffice-common
+                    synaptic
+                    transmission-common
+
+                    baobab
+                    cheese
+                    eog
+                    evince
+                    evolution
+                    #file-roller
+                    #gnome-backgrounds
+                    gnome-calendar
+                    gnome-characters
+                    gnome-clocks
+                    gnome-contacts
+                    #gnome-control-center
+                    #gnome-disk-utility
+                    gnome-font-viewer
+                    gnome-games
+                    gnome-logs
+                    gnome-maps
+                    gnome-music
+                    gnome-shell-extensions  # Default extensions
+                    #gnome-shell-extension-prefs # Tool to manage extensions
+                    gnome-sound-recorder
+                    #gnome-system-monitor
+                    gnome-terminal
+                    #gnome-text-editor
+                    gnome-weather
+                    #nautilus
+                    rhythmbox
+                    seahorse
+                    shotwell
+                    simple-scan
+                    totem
+                    yelp
+                )
+                ;;
+
+        esac
         ;;
-
-    esac
-    ;;
 
     "arch")
 
@@ -177,23 +177,23 @@ case $distro in
 
         case $DE in
 
-        "gnome")
+            "gnome")
 
-            packages+=(
-                gdm gnome-shell gnome-backgrounds
-                gnome-tweaks gnome-themes-extra
-                xdg-desktop-portal-gnome
+                packages+=(
+                    gdm gnome-shell gnome-backgrounds
+                    gnome-tweaks gnome-themes-extra
+                    xdg-desktop-portal-gnome
 
-                file-roller
-                gnome-control-center
-                gnome-disk-utility
-                gnome-system-monitor
-                gnome-text-editor
-                nautilus gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb
+                    file-roller
+                    gnome-control-center
+                    gnome-disk-utility
+                    gnome-system-monitor
+                    gnome-text-editor
+                    nautilus gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb
 
-                ffmpegthumbnailer   # Replacement for totem-video-thumbnailer
-            )
-            ;;
+                    ffmpegthumbnailer   # Replacement for totem-video-thumbnailer
+                )
+                ;;
 
         esac
         ;;
