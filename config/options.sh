@@ -78,6 +78,7 @@ case $distro in
             qemu-system-x86 virt-manager
             rsync
             smartmontools
+            timeshift
             tldr
             trash-cli
             ufw
@@ -169,6 +170,7 @@ case $distro in
             qemu-system-x86 virt-manager
             rsync
             smartmontools
+            timeshift
             tldr
             trash-cli
             ufw
@@ -183,8 +185,8 @@ case $distro in
 
                 packages+=(
                     gdm gnome-shell gnome-backgrounds
-                    gnome-tweaks gnome-themes-extra
                     xdg-desktop-portal-gnome
+                    gnome-tweaks gnome-themes-extra
 
                     file-roller
                     gnome-control-center
