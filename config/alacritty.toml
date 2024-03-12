@@ -26,8 +26,8 @@ blink_timeout = 0
 unfocused_hollow = false
 
 [cursor.style]
-blinking = "always"
-shape = "beam"
+blinking = "Always"
+shape = "Underline"
 
 [font]
 size = 14.0
@@ -41,9 +41,9 @@ mods = "Control"
 save_to_clipboard = true
 
 [window]
-decorations = "none"
+decorations = "None"
 opacity = 0.7
-#startup_mode = "maximized"
+#startup_mode = "Maximized"
 
 [window.padding]
 x = 15
