@@ -8,6 +8,9 @@
     "files.autoSave": "afterDelay",
 
     "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.cursorStyle": "underline",
+    "terminal.integrated.cursorStyleInactive": "none",
+    "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.profiles.linux": {
         "bash": {
             "path": "/app/bin/host-spawn",
