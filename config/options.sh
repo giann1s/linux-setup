@@ -75,7 +75,7 @@ case $distro in
             plocate
             podman podman-compose
             python3 python3-venv python-is-python3 pypy3
-            qemu-system-x86 virt-manager
+            qemu-system-x86 virt-manager qemu-utils
             rsync
             smartmontools
             timeshift
@@ -167,7 +167,7 @@ case $distro in
             plocate
             podman podman-compose
             python3 pypy3
-            qemu-system-x86 virt-manager
+            qemu-base virt-manager dnsmasq
             rsync
             smartmontools
             timeshift
