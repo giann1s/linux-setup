@@ -146,7 +146,7 @@ case $distro in
             linux-lts
 
             android-tools
-            alacritty
+            alacritty starship ttf-firacode-nerd noto-fonts-emoji
             bash-completion
             bat
             cpupower
